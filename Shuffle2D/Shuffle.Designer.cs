@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormShuffle));
             Button1 = new Button();
             LinkShuffle = new LinkLabel();
             Button5 = new Button();
@@ -330,6 +331,7 @@
             Controls.Add(LinkShuffle);
             Controls.Add(Button1);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             MaximizeBox = false;
             MaximumSize = new Size(326, 485);

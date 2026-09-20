@@ -19,15 +19,11 @@ namespace Shuffle2D
         private void ShowAbout()
         {
             string msg = "Programmer: Sunjit S. Nair \r\n" +
-            "Microsoft Certification ID: 3778888, \r\n" +
             "Certification: Microsoft Certified Application Developer \r\n \r\n" +
-            "Title of this program: Shuffle 2D \r\n" +
             "Category: Low resource Game.\r\n" +
-            "Development tool used: Microsoft Visual Studio 2022 \r\n" +
+            "Development tool used: Microsoft Visual Studio \r\n" +
             "Programming Language used for coding: C# .Net \r\n" +
-            "Developed: Jan-2023 \r\n" +
             "Total Development time: 1 Day \r\n \r\n" +
-            "About: I have 22 years experience in programming. This game was a New Year Surpise (2023) for my followers.\r\n\r\n" +
             "Website: \r\n" +
             "         sunjit41.com \r\n";
             MessageBox.Show(msg, "About Shuffle 2D", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -183,7 +179,7 @@ namespace Shuffle2D
         {
             try
             {
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Sunjit41\Shuffle2D");
+                RegistryKey? key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Sunjit41\Shuffle2D");
                 if (key != null)
                 {
                     BestScore = (int)key.GetValue("BestScore", 0);

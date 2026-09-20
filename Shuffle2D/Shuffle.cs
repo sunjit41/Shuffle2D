@@ -31,7 +31,9 @@ namespace Shuffle2D
 
         private void TryPosition(object sender, EventArgs e)
         {
-            if(!GameWin)
+            //If game not won, then check for move and update the button text accordingly.
+            //If game is won, then show a message box to start a new game.
+            if (!GameWin)
             {
                 int CurrentPlay = 0;
                 Button clickedButton = (Button)sender;
@@ -177,6 +179,7 @@ namespace Shuffle2D
 
         private void LoadAppSettings()
         {
+            //Load the best score from the registry
             try
             {
                 RegistryKey? key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Sunjit41\Shuffle2D");
@@ -202,6 +205,7 @@ namespace Shuffle2D
 
         private void SaveAppSettings(int BestScore)
         {
+            //Save the best score to the registry
             try
             {
                 RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Sunjit41\Shuffle2D");
